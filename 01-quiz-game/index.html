@@ -7,42 +7,56 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <main class="container">
       <!-- Start Screen -->
-      <div class="start-screen screen active">
-        <h1>Quiz Time!</h1>
+      <section class="start-screen screen active" aria-labelledby="start-title">
+        <h1 id="start-title">Quiz Time!</h1>
         <p>Test your knowledge with these fun questions</p>
-        <button class="start-btn">Start Quiz</button>
-      </div>
+        <button type="button" class="start-btn">Start Quiz</button>
+      </section>
       <!-- Quiz Screen -->
-      <div class="quiz-screen screen">
-        <div class="quiz-header">
-          <h1 class="question-text">Question goes here</h1>
+      <section class="quiz-screen screen" aria-labelledby="question-text">
+        <header class="quiz-header">
+          <h1 id="question-text" aria-live="polite">Question goes here</h1>
           <p class="quiz-info">
-            <span>Question <span class="current-question">1</span> of <span class="total-questions">5</span></span>
+            <span
+              >Question <span class="current-question">1</span> of
+              <span class="total-questions">5</span></span
+            >
             <span>Score: <span class="score">0</span></span>
-          </div>
-        </div>
+          </p>
+        </header>
+
         <div class="answers-container">
-            <button class="answer-btn correct">Answer</button>
-            <button class="answer-btn incorrect">Answer</button>
-            <button class="answer-btn">Answer</button>
-            <button class="answer-btn">Answer</button>
+          <button class="answer-btn correct">Answer</button>
+          <button class="answer-btn incorrect">Answer</button>
+          <button class="answer-btn">Answer</button>
+          <button class="answer-btn">Answer</button>
         </div>
-        <div class="progress-bar">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          aria-label="Quiz progress"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        >
           <div class="progress"></div>
         </div>
-      </div>
+      </section>
       <!-- Result Screen -->
-      <div class="result-screen screen">
-        <h1>Quiz Results</h1>
+      <section class="result-screen screen" aria-labelledby="result-title">
+        <h1 id="result-title">Quiz Results</h1>
         <div class="result-info">
-            <p>You scored <span class="final-score">0</span> out of <span class="max-score">5</span></p>
-            <p class="result-message">Good job!</p>
+          <p>
+            You scored <span class="final-score">0</span> out of
+            <span class="max-score">5</span>
+          </p>
+          <p class="result-message" aria-live="polite">Good job!</p>
         </div>
-        <button class="restart-quiz">Restart Quiz</button>
-      </div>
-    </div>
+        <button type="button" class="restart-quiz">Restart Quiz</button>
+      </section>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
