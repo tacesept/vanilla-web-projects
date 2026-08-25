@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- Start Screen -->
+      <section class="start-screen screen active" aria-labelledby="start-title">
+        <h1 id="start-title">Quiz Time!</h1>
+        <p>Test your knowledge with these fun questions</p>
+        <button type="button" class="start-btn">Start Quiz</button>
+      </section>
+      <!-- Quiz Screen -->
+      <section class="quiz-screen screen" aria-labelledby="question-text">
+        <header class="quiz-header">
+          <h1 id="question-text" aria-live="polite">Question goes here</h1>
+          <p class="quiz-info">
+            <span
+              >Question <span class="current-question">1</span> of
+              <span class="total-questions">5</span></span
+            >
+            <span>Score: <span class="score">0</span></span>
+          </p>
+        </header>
+
+        <div class="answers-container">
+          <button class="answer-btn correct">Answer</button>
+          <button class="answer-btn incorrect">Answer</button>
+          <button class="answer-btn">Answer</button>
+          <button class="answer-btn">Answer</button>
+        </div>
+        <div
+          class="progress-bar"
+          role="progressbar"
+          aria-label="Quiz progress"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        >
+          <div class="progress"></div>
+        </div>
+      </section>
+      <!-- Result Screen -->
+      <section class="result-screen screen" aria-labelledby="result-title">
+        <h1 id="result-title">Quiz Results</h1>
+        <div class="result-info">
+          <p>
+            You scored <span class="final-score">0</span> out of
+            <span class="max-score">5</span>
+          </p>
+          <p class="result-message" aria-live="polite">Good job!</p>
+        </div>
+        <button type="button" class="restart-btn">Restart Quiz</button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
